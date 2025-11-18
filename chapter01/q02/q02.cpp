@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main () {
     int N, X;
-    int A[];
+    int A[100];
     int how=0;
 
     scanf("%d %d",&N,&X);
