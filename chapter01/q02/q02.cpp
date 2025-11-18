@@ -8,7 +8,7 @@ int main () {
     for(int i=0; i<N-1;i++){
         scanf("%d",&A[i]);
     }
-    for(int i=0;i<N-1;i++){
+    for(int i=0;i<N;i++){
         if(A[i] == X){
             how = 1;           
         }
