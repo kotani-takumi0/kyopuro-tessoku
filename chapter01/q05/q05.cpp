@@ -3,15 +3,16 @@
 int main() {
     int N, K;
     int count=0;
-    scanf("%d %d",&N,&K);
-    for(int i=0;i<N;i++){
-        for(int j=0;j<N;j++){
-            for(int k=0;k<N;k++){
-                if(i + j + k == K)
-                    count ++;
-            }
+    cin >> N >> K;
+    for(int x = 1; x <= N; x++){
+        for(int y = 1 y <= N;y++){
+            int z = K - x - y; //白いカードに書かれるべき整数
+            //白いカードに書かれるべき数字zが1以上であり、N以下（条件より）の時にcountを一つ足す
+            if(z >= 1 && z <= N) count +=1;
         }
     }
-    printf("%d",count);
+    //出力
+    cout << Answer << endl;
+    return 0;
     
 }
