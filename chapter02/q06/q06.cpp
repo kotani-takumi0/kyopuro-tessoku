@@ -1,16 +1,22 @@
-#include<stdio.h>
-int main() {
-    int N=0, Q = 0;
+#include<iostream>
+using namespace std;
+
+int N, A[100009], A[100009];
+int Q, L[100009], R[100009];
+
+int main () {
+    //入力
     cin >> N >> Q;
-    int A[N];
-    int L[Q], R[Q];
-    for(int i = 0;i < N-1;N++){
-        scanf("%d",&A[i]);
+    for (int i = 1; i <= N; i++) cin >> A[i];
+    for (int j = 1; j <= Q; j++) cin >> L[j], R[j];
+
+    //累積和の計算
+    S[0] = 0;
+    for (int i = 1; i <= N; i++) S[i] = S[i - 1] + A[i];
+
+    //質問に答える
+    for (int j = 1; j <= Q; j++){
+        cout << S[R[j]] - S[L[j] -1] << endl;
     }
-    int guest[Q];
-    for(int i = 0;i <= Q;i++){
-        scanf("%d ,%d",&L[i],&R[i]);
-        guest[i] = R[i] - L[i];
-        printf("%d",guest);
-    }
+    return 0;
 }
